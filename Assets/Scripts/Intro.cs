@@ -8,6 +8,8 @@ public class Intro : MonoBehaviour
 {
     public TMP_InputField initials;
 
+    public TextMeshProUGUI title1, title2;
+
     void Start()
     {
         
@@ -29,6 +31,8 @@ public class Intro : MonoBehaviour
 
             }
         }
+
+        title2.characterSpacing = title1.characterSpacing = Mathf.PingPong(Time.time*4f, 50f);
     }
 
     private IEnumerator DelayedStart()

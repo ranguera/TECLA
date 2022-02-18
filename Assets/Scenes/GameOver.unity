@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 432446512}
   - component: {fileID: 432446511}
   m_Layer: 0
-  m_Name: IntroLoop
+  m_Name: EndLoop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +285,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fbf2f6e559de85f49bc048cdc5e21dc6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -1339,6 +1339,9 @@ MonoBehaviour:
   score: {fileID: 785520870}
   title1: {fileID: 648721028}
   title2: {fileID: 591668990}
+  gameover: {fileID: 8300000, guid: fbf2f6e559de85f49bc048cdc5e21dc6, type: 3}
+  win: {fileID: 8300000, guid: a1998efc62c197046bccfce58d293543, type: 3}
+  asrc: {fileID: 432446511}
 --- !u!1 &1932814651
 GameObject:
   m_ObjectHideFlags: 0

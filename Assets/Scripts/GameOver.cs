@@ -12,6 +12,10 @@ public class GameOver : MonoBehaviour
     public TextMeshProUGUI title1;
     public TextMeshProUGUI title2;
 
+    public AudioClip gameover;
+    public AudioClip win;
+    public AudioSource asrc;
+
     void Start()
     {
         score.text = Questions.Instance.score.ToString();
@@ -22,11 +26,15 @@ public class GameOver : MonoBehaviour
             congrats.SetActive(true);
             title1.text = "FELICITATS!";
             title2.text = "FELICITATS!";
+            asrc.clip = win;
+            asrc.Play();
         }
         else
         {
             tryAgainButton.SetActive(true);
             congrats.SetActive(false);
+            asrc.clip = gameover;
+            asrc.Play();
         }
     }
 

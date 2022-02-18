@@ -19,7 +19,6 @@ public class Background : MonoBehaviour
     {
         this.transform.Translate(Vector3.left * Time.deltaTime * speed);
 
-        print(r.position.x);
         if (r.position.x <= -1919)
             this.transform.position = this.initialpos;
     }

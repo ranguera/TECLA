@@ -46,8 +46,23 @@ public class Spawner : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(this.adaptTime);
-            this.maxTime *= .8f;
-            this.minTime *= .8f;
+            this.maxTime *= .85f;
+            this.minTime *= .85f;
         }
+    }
+
+    public void Clear()
+    {
+        Move[] enemys = GetComponentsInChildren<Move>();
+        for (int i = 0; i < enemys.Length; i++)
+        {
+            enemys[i].ClearEnemy();
+        }
+    }
+
+    public void Bonus()
+    {
+        this.minTime += .5f;
+        this.maxTime += .5f;
     }
 }

@@ -21,4 +21,9 @@ public class Move : MonoBehaviour
         if (this.rect.position.x < this.xMin)
             Destroy(this.gameObject);
     }
+
+    public void ClearEnemy()
+    {
+        Destroy(this.gameObject);
+    }
 }

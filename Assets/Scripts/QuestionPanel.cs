@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class QuestionPanel : MonoBehaviour
 {
     public Score score;
+    public Spawner spawner;
     public GameObject panel;
     public TextMeshProUGUI question;
     public TextMeshProUGUI option1;
@@ -43,6 +44,8 @@ public class QuestionPanel : MonoBehaviour
             Questions.Instance.score = this.score.score;
             this.score.Resume();
             this.panel.SetActive(false);
+            this.spawner.Clear();
+            this.spawner.Bonus();
             GameControl.Instance.HideQuestion();
             Questions.Instance.NextQuestion();
         }

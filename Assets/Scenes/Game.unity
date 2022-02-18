@@ -1308,6 +1308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 1428399518}
+  spawner: {fileID: 850727648}
   panel: {fileID: 1465122662}
   question: {fileID: 1921586795}
   option1: {fileID: 1332944870}

@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class QuestionPanel : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class QuestionPanel : MonoBehaviour
         Question q = Questions.Instance.GetCurrentQuestion();
         Questions.Instance.AddAnswer(q.options[num]);
         Questions.Instance.AddTime(Time.time - answerTime);
+        Questions.Instance.endTime = DateTime.Now;
 
         if ( q.options[num] == q.answer )
         {
@@ -50,7 +52,7 @@ public class QuestionPanel : MonoBehaviour
             Questions.Instance.NextQuestion();
         }
         else
-        {
+        {            
             SceneManager.LoadScene("GameOver");
 
             //Questions.Instance.score = this.score.score;

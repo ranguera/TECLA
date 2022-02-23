@@ -89,7 +89,6 @@ public class Questions : MonoBehaviour
         this.questionIndex++;
         if (this.questionIndex >= this.questions.Count)
         {
-            this.endTime = DateTime.Now;
             this.finished = true;
             SceneManager.LoadScene("GameOver");
         }

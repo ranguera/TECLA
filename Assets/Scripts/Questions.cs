@@ -73,10 +73,10 @@ public class Questions : MonoBehaviour
             questions[i].options = questions[i].options.OrderBy(item => rnd.Next()).ToList<string>();
         }
 
-        for (int i = 0; i < this.questions.Count; i++)
-        {
-            print(this.questions[i]);
-        }
+        //for (int i = 0; i < this.questions.Count; i++)
+        //{
+        //    print(this.questions[i]);
+        //}
     }
 
     public Question GetCurrentQuestion()
